@@ -1,22 +1,33 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+interface BodaLayoutProps {
+  pageTitle?: string;
+  pageDescription?: string;
+}
+
+const { pageTitle, pageDescription } = Astro.props as BodaLayoutProps;
+const fullPageTitle = pageTitle ? `${pageTitle} · AJ` : 'AJ';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>{fullPageTitle}</title>
+    <meta
+      name="description"
+      content={pageDescription ?? 'Página de la boda de Alejandra y Jose Manuel'}
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="page-container">
+      <Header />
+      <main>
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<header class="pb-2 pt-4">
+  <div class="flex items-center px-4">
+    <h1 class="logo-title flex-1 text-center text-lg uppercase tracking-[0.15em] text-primary">
+      alejandra & jose manuel
+    </h1>
+
+    <button
+      id="openMenuButton"
+      type="button"
+      class="ml-auto inline-flex items-center px-3 py-2"
+      aria-label="Abrir menú de navegación"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.6"
+          d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div
+  id="mobileMenu"
+  class="fixed inset-0 z-40 flex hidden translate-x-full transform flex-col bg-primary bg-white px-6 pt-6 transition-transform duration-500 ease-out"
+>
+  <div class="flex items-center justify-end text-white">
+    <!-- Botón cerrar dentro del slide -->
+    <button
+      id="closeMenuButton"
+      type="button"
+      class="inline-flex items-center justify-center px-3 py-2"
+      aria-label="Cerrar menú de navegación"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.6"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <nav class="flex flex-1 flex-col items-center justify-center gap-12 text-center text-white">
+    <a href="/" class="text-lg no-underline hover:text-primary">INICIO</a>
+    <a href="/travel" class="text-lg no-underline hover:text-primary">EL VIAJE</a>
+    <a href="/rsvp" class="text-lg no-underline hover:text-primary">RSVP</a>
+    <a href="/faqs" class="text-lg no-underline hover:text-primary">FAQS</a>
+  </nav>
+</div>
+
+<script>
+  const openMenuButtonElement = document.getElementById('openMenuButton');
+  const closeMenuButtonElement = document.getElementById('closeMenuButton');
+  const mobileMenuElement = document.getElementById('mobileMenu');
+  const navigationLinkElements = mobileMenuElement?.querySelectorAll('a');
+
+  function openMobileMenu() {
+    mobileMenuElement?.classList.remove('hidden');
+    // Pequeño delay para que la transición ocurra correctamente
+    requestAnimationFrame(() => {
+      mobileMenuElement?.classList.remove('translate-x-full');
+    });
+    openMenuButtonElement?.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeMobileMenu() {
+    mobileMenuElement?.classList.add('translate-x-full');
+    openMenuButtonElement?.setAttribute('aria-expanded', 'false');
+
+    setTimeout(() => {
+      mobileMenuElement?.classList.add('hidden');
+    }, 500); // Debe coincidir con duration-500
+  }
+
+  if (openMenuButtonElement && closeMenuButtonElement && mobileMenuElement) {
+    openMenuButtonElement.addEventListener('click', openMobileMenu);
+    closeMenuButtonElement.addEventListener('click', closeMobileMenu);
+
+    navigationLinkElements?.forEach((navigationLinkElement) => {
+      navigationLinkElement.addEventListener('click', closeMobileMenu);
+    });
+  }
+</script>
