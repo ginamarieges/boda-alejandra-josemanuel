@@ -3,4 +3,19 @@ import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout />
+<Layout>
+  <!-- Home section -->
+  <section class="flex flex-col gap-4 py-6 pb-8 pt-14">
+    <div class="relative mx-auto w-fit">
+      <div class="absolute -top-6 left-1/2 -translate-x-1/2">
+        <span class="text-4xl text-primary">26·09·26</span>
+      </div>
+      <img class="mx-auto h-[450px] w-auto object-contain" src="images/selfie.webp" />
+    </div>
+    <blockquote
+      class="mx-auto max-w-4xl text-pretty px-6 text-center text-2xl italic leading-relaxed text-primary md:text-4xl"
+    >
+      "Prepárate para el capítulo más épico de nuestras vidas. ¡Tu presencia hará historia!"
+    </blockquote>
+  </section>
+</Layout>
