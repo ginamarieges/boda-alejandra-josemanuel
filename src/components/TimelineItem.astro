@@ -10,8 +10,13 @@ const rowClass = align === 'left' ? 'flex-row' : 'flex-row-reverse';
 ---
 
 <div class="text-center leading-tight">
-  <div class=`text-${align} text-xl uppercase tracking-[0.3em] md:text-2xl`><span>WE</span></div>
-  <div class={`flex ${rowClass} items-baseline justify-between`}>
+  <p class="sr-only">
+    We {title} at {time}
+  </p>
+  <div class=`text-${align} px-4 text-xl uppercase tracking-[0.3em] md:text-2xl`>
+    <span>WE</span>
+  </div>
+  <div class={`flex ${rowClass} items-baseline justify-between`} aria-hidden="true">
     <span class="text-3xl font-semibold uppercase tracking-[0.15em] md:text-4xl">
       {title}
     </span>
