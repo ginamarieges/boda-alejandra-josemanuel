@@ -27,11 +27,11 @@ import Countdown from '../components/Countdown.astro';
   <!-- Time line -->
   <section
     aria-labelledby="timeline-heading"
-    class="relative min-h-screen bg-[url('/images/puerto.jpeg')] bg-cover bg-left bg-no-repeat"
+    class="relative bg-[url('/images/puerto.jpeg')] bg-cover bg-left bg-no-repeat"
   >
     <div class="absolute inset-0 bg-black/60"></div>
     <div
-      class="relative z-10 flex min-h-screen flex-col items-center justify-center px-8 py-6 text-center text-white"
+      class="relative z-10 flex flex-col items-center justify-center px-8 py-6 pt-12 text-center text-white"
     >
       <h2 id="timeline-heading" class="text-center text-xl uppercase tracking-widest">timeline</h2>
       <div class="flex justify-center py-6">
@@ -72,12 +72,10 @@ import Countdown from '../components/Countdown.astro';
     </div>
   </section>
   <!-- Countdown -->
-  <section
-    class="relative min-h-screen bg-[url('/images/banco.webp')] bg-cover bg-center bg-no-repeat"
-  >
+  <section class="relative bg-[url('/images/banco.webp')] bg-cover bg-center bg-no-repeat">
     <div class="absolute inset-0 bg-black/60"></div>
     <div
-      class="relative z-10 flex min-h-screen flex-col items-center justify-center px-8 py-6 text-center text-white"
+      class="relative z-10 flex flex-col items-center justify-center px-8 py-6 pt-12 text-center text-white"
     >
       <Countdown />
     </div>
