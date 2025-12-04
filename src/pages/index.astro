@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
 import TimelineItem from '../components/TimelineItem.astro';
+import Countdown from '../components/Countdown.astro';
 ---
 
 <Layout>
@@ -11,23 +12,28 @@ import TimelineItem from '../components/TimelineItem.astro';
       <div class="absolute -top-4 left-1/2 -translate-x-1/2">
         <span class="whitespace-nowrap text-3xl text-primary">26 · 09 · 26</span>
       </div>
-      <img class="mx-auto h-[450px] w-auto object-contain" src="images/selfie.webp" />
+      <img
+        class="mx-auto h-[450px] w-auto object-contain"
+        src="images/selfie.webp"
+        alt="picture of alejandra & jota"
+      />
     </div>
-    <blockquote
+    <h1
       class="mx-auto max-w-4xl text-pretty px-6 pt-6 text-center text-2xl leading-relaxed text-primary md:text-4xl"
     >
       Prepárate para el capítulo más épico de nuestras vidas
-    </blockquote>
+    </h1>
   </section>
   <!-- Time line -->
   <section
+    aria-labelledby="timeline-heading"
     class="relative min-h-screen bg-[url('/images/puerto.jpeg')] bg-cover bg-left bg-no-repeat"
   >
     <div class="absolute inset-0 bg-black/60"></div>
     <div
       class="relative z-10 flex min-h-screen flex-col items-center justify-center px-8 py-6 text-center text-white"
     >
-      <h2 class="text-center text-xl uppercase tracking-widest">timeline</h2>
+      <h2 id="timeline-heading" class="text-center text-xl uppercase tracking-widest">timeline</h2>
       <div class="flex justify-center py-6">
         <div
           class="flex h-[640px] w-[280px] flex-col justify-around gap-6 overflow-hidden shadow-md md:h-[760px] md:w-[360px]"
@@ -43,9 +49,14 @@ import TimelineItem from '../components/TimelineItem.astro';
   <!-- Location -->
   <section class="flex flex-col gap-4 py-6 pb-8 pt-14">
     <h2 class="pb-8 text-center text-xl uppercase tracking-widest text-primary">location</h2>
-    <img class="mx-auto h-[450px] w-auto object-contain" src="images/sergude.webp" alt="" />
+    <img
+      class="mx-auto h-[450px] w-auto object-contain"
+      src="images/sergude.webp"
+      alt="Entrance of Pazo de Sergude"
+    />
     <a
       target="_blank"
+      aria-label="Link to venue location"
       class="text-md px-14 pt-4 text-center uppercase text-primary underline"
       href="https://www.google.es/maps/place/Pazo+de+Sergude/@43.304573,-8.9045264,20231m/data=!3m1!1e3!4m6!3m5!1s0xd2e96435a9e12ed:0xd4b22c2560663f62!8m2!3d43.2451556!4d-8.8045251!16s%2Fg%2F11bccghkt9?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
       >Pazo de Sergude, Xornes, A Coruña</a
@@ -53,10 +64,22 @@ import TimelineItem from '../components/TimelineItem.astro';
     <div class="mx-auto pt-4">
       <a
         href="/travel"
+        aria-label="Information to get to the wedding venue"
         class="inline-flex w-40 items-center justify-center bg-primary p-6 text-sm uppercase tracking-widest text-white"
       >
         Travel
       </a>
+    </div>
+  </section>
+  <!-- Countdown -->
+  <section
+    class="relative min-h-screen bg-[url('/images/banco.webp')] bg-cover bg-center bg-no-repeat"
+  >
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div
+      class="relative z-10 flex min-h-screen flex-col items-center justify-center px-8 py-6 text-center text-white"
+    >
+      <Countdown />
     </div>
   </section>
 </Layout>
