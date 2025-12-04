@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  time: string;
+  align?: 'left' | 'right';
+}
+
+const { title, time, align = 'right' } = Astro.props;
+const rowClass = align === 'left' ? 'flex-row' : 'flex-row-reverse';
+---
+
+<div class="text-center leading-tight">
+  <div class=`text-${align} text-xl uppercase tracking-[0.3em] md:text-2xl`><span>WE</span></div>
+  <div class={`flex ${rowClass} items-baseline justify-between`}>
+    <span class="text-3xl font-semibold uppercase tracking-[0.15em] md:text-4xl">
+      {title}
+    </span>
+    <span class="whitespace-nowrap text-sm tracking-widest md:text-base">
+      {time}
+    </span>
+  </div>
+</div>

@@ -1,21 +1,43 @@
 ---
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
+import TimelineItem from '../components/TimelineItem.astro';
 ---
 
 <Layout>
   <!-- Home section -->
   <section class="flex flex-col gap-4 py-6 pb-8 pt-14">
     <div class="relative mx-auto w-fit">
-      <div class="absolute -top-6 left-1/2 -translate-x-1/2">
-        <span class="text-4xl text-primary">26·09·26</span>
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+        <span class="whitespace-nowrap text-3xl text-primary">26 · 09 · 26</span>
       </div>
       <img class="mx-auto h-[450px] w-auto object-contain" src="images/selfie.webp" />
     </div>
     <blockquote
-      class="mx-auto max-w-4xl text-pretty px-6 text-center text-2xl italic leading-relaxed text-primary md:text-4xl"
+      class="mx-auto max-w-4xl text-pretty px-6 pt-6 text-center text-2xl leading-relaxed text-primary md:text-4xl"
     >
-      "Prepárate para el capítulo más épico de nuestras vidas. ¡Tu presencia hará historia!"
+      Prepárate para el capítulo más épico de nuestras vidas
     </blockquote>
+  </section>
+  <!-- Time line -->
+  <section
+    class="relative min-h-screen bg-[url('/images/puerto.jpeg')] bg-cover bg-left bg-no-repeat"
+  >
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div
+      class="relative z-10 flex min-h-screen flex-col items-center justify-center px-8 py-6 text-center text-white"
+    >
+      <h2 class="text-center text-xl uppercase tracking-widest">timeline</h2>
+      <div class="flex justify-center py-6">
+        <div
+          class="flex h-[640px] w-[280px] flex-col justify-around gap-6 overflow-hidden shadow-md md:h-[760px] md:w-[360px]"
+        >
+          <TimelineItem time="5:00 PM" title="Do" align="right" />
+          <TimelineItem time="6:00 PM" title="Eat" align="left" />
+          <TimelineItem time="7:00 PM" title="Drink" align="right" />
+          <TimelineItem time="8:00 PM" title="Party" align="left" />
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>

@@ -1,13 +1,12 @@
 <header class="pb-2 pt-4">
-  <div class="flex items-center px-4">
+  <div class="flex items-center px-4 pt-2">
     <h1 class="logo-title flex-1 text-center text-lg uppercase tracking-[0.15em] text-primary">
-      alejandra & jose manuel
+      Alejandra & jota
     </h1>
-
     <button
       id="openMenuButton"
       type="button"
-      class="ml-auto inline-flex items-center px-3 py-2"
+      class="ml-auto inline-flex items-center px-3 py-2 text-primary"
       aria-label="Abrir menú de navegación"
       aria-expanded="false"
       aria-controls="mobileMenu"
@@ -31,10 +30,9 @@
 
 <div
   id="mobileMenu"
-  class="fixed inset-0 z-40 flex hidden translate-x-full transform flex-col bg-primary bg-white px-6 pt-6 transition-transform duration-500 ease-out"
+  class="fixed inset-0 z-40 flex hidden translate-x-full transform flex-col bg-primary px-6 pt-6 transition-transform duration-500 ease-out"
 >
   <div class="flex items-center justify-end text-white">
-    <!-- Botón cerrar dentro del slide -->
     <button
       id="closeMenuButton"
       type="button"
@@ -73,7 +71,6 @@
 
   function openMobileMenu() {
     mobileMenuElement?.classList.remove('hidden');
-    // Pequeño delay para que la transición ocurra correctamente
     requestAnimationFrame(() => {
       mobileMenuElement?.classList.remove('translate-x-full');
     });
@@ -86,7 +83,7 @@
 
     setTimeout(() => {
       mobileMenuElement?.classList.add('hidden');
-    }, 500); // Debe coincidir con duration-500
+    }, 500);
   }
 
   if (openMenuButtonElement && closeMenuButtonElement && mobileMenuElement) {
