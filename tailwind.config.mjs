@@ -4,8 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['"Montserrat"', 'sans-serif'],
-        meaCulpa: ['"Mea Culpa"', 'cursive'],
+        aegean: ['tan-aegean', 'sans-serif'],
       },
       colors: {
         primary: '#0000FF',
