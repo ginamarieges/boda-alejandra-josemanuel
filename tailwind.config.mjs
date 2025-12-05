@@ -7,7 +7,8 @@ export default {
         aegean: ['tan-aegean', 'sans-serif'],
       },
       colors: {
-        primary: '#0000FF',
+        // primary: '#0000FF',
+        primary: '#000000',
       },
       maxWidth: {
         weddingContainer: '900px',
