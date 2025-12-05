@@ -1,0 +1,91 @@
+<form method="POST" name="rsvp-wedding" data-netlify="true" class="mx-auto max-w-md rounded-lg p-8">
+  <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-2">
+      <label class="mb-2 block text-sm font-medium text-white">Nombre y Apellidos *</label>
+      <input
+        name="fullName"
+        required
+        type="text"
+        class="w-full rounded-lg p-3"
+        placeholder="Introduce tu nombre"
+      />
+    </div>
+    <div class="flex flex-col gap-2">
+      <label class="mb-2 block text-sm font-medium text-white">Email *</label>
+      <input
+        name="email"
+        required
+        type="email"
+        class="w-full rounded-lg p-3"
+        placeholder="tu@email.com"
+      />
+    </div>
+    <div class="flex flex-col gap-2">
+      <label class="mb-2 block text-sm font-medium text-white">¿Confirmas tu asistencia? *</label>
+      <select name="attending" required class="w-full rounded-lg px-4 py-2">
+        <option value="">Selecciona una opción</option>
+        <option value="yes">Sí, asistiré 🎉</option>
+        <option value="no">No podré asistir 😔</option>
+      </select>
+    </div>
+    <div class="flex flex-col gap-2">
+      <label class="mb-2 block text-sm font-medium text-white">Menú preferido *</label>
+      <select name="menu" required id="menu" class="w-full rounded-lg px-4 py-2">
+        <option value="">Selecciona tu menú</option>
+        <option value="normal">Normal</option>
+        <option value="vegetariano">Vegetariano 🌿</option>
+        <option value="vegano">Vegano 🥗</option>
+        <option value="infantil">Infantil 👶</option>
+        <option value="otros">Otros</option>
+      </select>
+    </div>
+    <div class="flex flex-col gap-2">
+      <label class="mb-2 block text-sm font-medium text-white">¿A qué tienes alergia?</label>
+      <input
+        name="allergies"
+        type="text"
+        class="w-full rounded-lg p-3"
+        placeholder="Ej: Gluten, frutos secos, mariscos..."
+      />
+    </div>
+    <div class="flex flex-col gap-2">
+      <label class="mb-2 block text-sm font-medium text-white">¿Usarás los autobuses? *</label>
+      <select name="bus" required class="w-full rounded-lg px-4 py-2">
+        <option value="">Selecciona una opción</option>
+        <option value="yes">Sí, usaré los autobuses 🚌</option>
+        <option value="no">No, iré por mi cuenta 🚗</option>
+      </select>
+    </div>
+    <div class="flex flex-col gap-2">
+      <label class="mb-2 block text-sm font-medium text-white"
+        >¡Dedícanos tu canción favorita! 🎵</label
+      >
+      <input
+        name="song"
+        type="text"
+        class="w-full rounded-lg p-3"
+        placeholder="Ej: 'Perfect' - Ed Sheeran"
+      />
+    </div>
+    <div class="flex flex-col gap-2">
+      <label class="mb-2 block text-sm font-medium text-white"
+        >¿Quieres códigos descuento hoteles? *</label
+      >
+      <select name="hotelDiscount" required class="w-full rounded-lg px-4 py-2">
+        <option value="">Selecciona una opción</option>
+        <option value="yes">Sí, envíamelos 🏨</option>
+        <option value="no">No, gracias</option>
+      </select>
+    </div>
+    <div class="flex flex-col gap-2">
+      <label class="mb-2 block text-sm font-medium text-white">¿Algún consejo?</label>
+      <input name="advice" type="text" class="w-full rounded-lg p-3" placeholder="❤️" />
+    </div>
+    <button
+      type="submit"
+      class="w-full transform rounded-lg bg-primary px-6 py-4 text-lg font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:from-rose-600 hover:to-pink-600"
+    >
+      ¡Confirmar asistencia!
+    </button>
+  </div>
+</form>

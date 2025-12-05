@@ -1,0 +1,17 @@
+---
+// RSVPForm.astro - Puro Astro + Netlify Forms (sin reactivity compleja)
+import Layout from '../layouts/Layout.astro';
+import RsvpForm from '../components/RsvpForm.astro';
+---
+
+<Layout>
+  <section
+    class="bg-[url('/images/puerto.jpeg')] bg-right px-8 py-6"
+    aria-labelledby="RSVP-heading"
+  >
+    <h2 id="RSVP-heading" class="text-center text-xl uppercase tracking-widest">
+      Confirmación de asistencia
+    </h2>
+    <RsvpForm />
+  </section>
+</Layout>
