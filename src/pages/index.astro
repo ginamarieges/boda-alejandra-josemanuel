@@ -7,7 +7,7 @@ import Countdown from '../components/Countdown.astro';
 
 <Layout>
   <!-- Home section -->
-  <section class="flex flex-col gap-4 py-6 pb-8 pt-8">
+  <section class="flex flex-col gap-4 py-8">
     <div class="relative mx-auto w-fit">
       <img
         class="mx-auto h-[450px] w-auto object-contain"
@@ -50,9 +50,9 @@ import Countdown from '../components/Countdown.astro';
     <a
       target="_blank"
       aria-label="Link to venue location"
-      class="text-md px-14 pt-4 text-center text-primary"
+      class="text-md px-14 pt-4 text-center font-mono text-primary"
       href="https://www.google.es/maps/place/Pazo+de+Sergude/@43.304573,-8.9045264,20231m/data=!3m1!1e3!4m6!3m5!1s0xd2e96435a9e12ed:0xd4b22c2560663f62!8m2!3d43.2451556!4d-8.8045251!16s%2Fg%2F11bccghkt9?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
-      >Pazo de Sergude, Xornes, A Coruña</a
+      >pazo de sergude</a
     >
     <div class="mx-auto pt-4">
       <a
@@ -65,7 +65,7 @@ import Countdown from '../components/Countdown.astro';
     </div>
   </section>
   <!-- Countdown -->
-  <section class="relative bg-[url('/images/banco.webp')] bg-cover bg-center bg-no-repeat">
+  <section class="relative bg-[url('/images/banco.webp')] bg-cover bg-center bg-no-repeat pb-4">
     <div class="absolute inset-0 bg-black/60"></div>
     <div
       class="relative z-10 flex flex-col items-center justify-center px-8 py-6 pt-12 text-center text-white"
@@ -75,9 +75,11 @@ import Countdown from '../components/Countdown.astro';
   </section>
   <!-- RSVP -->
   <section class="flex flex-col gap-4 py-6 pb-8 pt-14">
-    <h2 class="pb-8 text-center text-xl uppercase tracking-widest text-primary">rsvp</h2>
+    <h2 class="pb-8 text-center text-xl uppercase tracking-widest text-primary">
+      Confirmación de asistencia
+    </h2>
     <img
-      class="mx-8 mx-auto h-[450px] w-auto object-cover"
+      class="mx-auto h-[335px] w-auto object-contain"
       src="images/rsvp.webp"
       alt="Entrance of Pazo de Sergude"
     />
@@ -88,9 +90,9 @@ import Countdown from '../components/Countdown.astro';
       <a
         href="/rsvp"
         aria-label="Form to rsvp the invitation"
-        class="inline-flex w-52 items-center justify-center bg-primary p-6 text-sm uppercase tracking-widest text-white"
+        class="inline-flex items-center justify-center bg-primary p-6 text-center text-sm uppercase tracking-widest text-white"
       >
-        RSVP
+        Confirmar asistencia
       </a>
     </div>
   </section>
