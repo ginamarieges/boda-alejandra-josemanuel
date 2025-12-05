@@ -7,22 +7,15 @@ import Countdown from '../components/Countdown.astro';
 
 <Layout>
   <!-- Home section -->
-  <section class="flex flex-col gap-4 py-6 pb-8 pt-14">
+  <section class="flex flex-col gap-4 py-6 pb-8 pt-8">
     <div class="relative mx-auto w-fit">
-      <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-        <span class="whitespace-nowrap text-3xl text-primary">26 · 09 · 26</span>
-      </div>
       <img
         class="mx-auto h-[450px] w-auto object-contain"
         src="images/selfie.webp"
         alt="picture of alejandra & jota"
       />
     </div>
-    <h1
-      class="mx-auto max-w-4xl text-pretty px-6 pt-6 text-center text-2xl leading-relaxed text-primary md:text-4xl"
-    >
-      Prepárate para el capítulo más épico de nuestras vidas
-    </h1>
+    <h1 class="mx-auto whitespace-nowrap pt-6 text-3xl text-primary">26 · 09 · 26</h1>
   </section>
   <!-- Time line -->
   <section
@@ -78,6 +71,27 @@ import Countdown from '../components/Countdown.astro';
       class="relative z-10 flex flex-col items-center justify-center px-8 py-6 pt-12 text-center text-white"
     >
       <Countdown />
+    </div>
+  </section>
+  <!-- RSVP -->
+  <section class="flex flex-col gap-4 py-6 pb-8 pt-14">
+    <h2 class="pb-8 text-center text-xl uppercase tracking-widest text-primary">rsvp</h2>
+    <img
+      class="mx-8 mx-auto h-[450px] w-auto object-cover"
+      src="images/rsvp.webp"
+      alt="Entrance of Pazo de Sergude"
+    />
+    <span class="text-md px-14 pt-4 text-center font-mono text-primary"
+      >aquí os dejamos un pequeño formulario
+    </span>
+    <div class="mx-auto pt-4">
+      <a
+        href="/rsvp"
+        aria-label="Form to rsvp the invitation"
+        class="inline-flex w-52 items-center justify-center bg-primary p-6 text-sm uppercase tracking-widest text-white"
+      >
+        RSVP
+      </a>
     </div>
   </section>
 </Layout>

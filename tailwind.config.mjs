@@ -5,6 +5,10 @@ export default {
     extend: {
       fontFamily: {
         aegean: ['tan-aegean', 'sans-serif'],
+        alumni: ['Alumni Sans Pinstripe', 'sans-serif'],
+        lexend: ['Lexend Mega', 'sans-serif'],
+        zalando: ['Zalando Sans Expanded', 'sans-serif'],
+        mono: ['Major Mono Display', 'sans-serif'],
       },
       colors: {
         // primary: '#0000FF',
